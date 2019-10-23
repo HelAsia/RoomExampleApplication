@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/titleMainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:text="@string/title"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/insertUserDataMainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleMainActivity" >
+
+        <EditText
+            android:id="@+id/insertUserNameMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:hint="@string/name_hint" />
+
+        <EditText
+            android:id="@+id/insertUserSurnameMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin"
+            android:hint="@string/surname_hint" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/insertUserMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/insert_button"
+        android:layout_margin="@dimen/margin"
+        android:background="@color/black"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertUserDataMainActivity" />
+
+    <Button
+        android:id="@+id/updateUserMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update_button"
+        android:layout_margin="@dimen/margin"
+        android:enabled="false"
+        android:background="@color/gray"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertUserMainActivity"/>
+
+    <Button
+        android:id="@+id/deleteUserMainActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_button"
+        android:layout_margin="@dimen/margin"
+        android:enabled="false"
+        android:background="@color/gray"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/updateUserMainActivity"/>
+
+    <LinearLayout
+        android:id="@+id/userDataMainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="@dimen/margin_medium"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deleteUserMainActivity" >
+
+        <TextView
+            android:id="@+id/userNameMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_margin="@dimen/margin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size"
+            android:text="@string/name_hint"/>
+
+        <TextView
+            android:id="@+id/userSurnameMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_margin="@dimen/margin"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/text_size"
+            android:text="@string/surname_hint"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

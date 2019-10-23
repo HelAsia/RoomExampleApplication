@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Room Example Application</string>
+    <string name="title">A simple example of using the Room library:</string>
+    <string name="update_button">Update</string>
+    <string name="insert_button">Insert</string>
+    <string name="delete_button">Delete</string>
+    <string name="save_button">Save</string>
+    <string name="name_hint">Enter name</string>
+    <string name="surname_hint">Enter surname</string>
+</resources>
